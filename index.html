@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple Library Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Library Management</h1>
+  </header>
+  <main class="container">
+    <section class="controls">
+      <form id="book-form">
+        <h2>Add a Book</h2>
+        <div class="form-row">
+          <label>Title<input id="title" required placeholder="Book title"></label>
+          <label>Author<input id="author" required placeholder="Author name"></label>
+          <label>Year<input id="year" type="number" min="0" placeholder="2024"></label>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Add Book</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div class="search">
+        <label>Search<input id="search" placeholder="Search by title or author"></label>
+      </div>
+    </section>
+
+    <section class="list">
+      <h2>Books</h2>
+      <div id="books-container" class="books-grid"></div>
+      <p id="empty-msg" class="muted">No books yet — add one above.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
